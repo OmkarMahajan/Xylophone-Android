@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity  {
     private int mASoundId;
     private int mBSoundId;
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +39,42 @@ public class MainActivity extends AppCompatActivity  {
 
         // TODO: Load and get the IDs to identify the sounds
 
-        //mCSoundId = mSoundpool.load(MainActivity.this,0,0);
+        mCSoundId = mSoundpool.load(MainActivity.this,R.raw.note1_c,1);
+        mDSoundId = mSoundpool.load(MainActivity.this,R.raw.note2_d,1);
+        mESoundId = mSoundpool.load(MainActivity.this,R.raw.note3_e,1);
+        mFSoundId = mSoundpool.load(MainActivity.this,R.raw.note4_f,1);
+        mGSoundId = mSoundpool.load(MainActivity.this,R.raw.note5_g,1);
+        mASoundId = mSoundpool.load(MainActivity.this,R.raw.note6_a,1);
+        mBSoundId = mSoundpool.load(MainActivity.this,R.raw.note7_b,1);
     }
 
     // TODO: Add the play methods triggered by the buttons
    public void cPlay(View v)
    {
-       Log.d("hi","Succeessfull");
+       mSoundpool.play(mCSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
    }
+    public void dPlay(View v)
+    {
+        mSoundpool.play(mDSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
+    }
+    public void ePlay(View v)
+    {
+        mSoundpool.play(mESoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
+    }
+    public void fPlay(View v)
+    {
+        mSoundpool.play(mFSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
+    }
+    public void gPlay(View v)
+    {
+        mSoundpool.play(mGSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
+    }
+    public void aPlay(View v)
+    {
+        mSoundpool.play(mASoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
+    }
+    public void bPlay(View v)
+    {
+        mSoundpool.play(mBSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
+    }
 }
